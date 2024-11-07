@@ -5,38 +5,77 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f2f2f2;
+    background-color: #f0f0f0;
 }
 
 .game-container {
     text-align: center;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 350px;
 }
 
-#guess-input {
-    width: 80%;
-    padding: 8px;
-    margin-bottom: 10px;
+h1 {
+    color: #333;
+    font-size: 1.8em;
 }
 
-#guess-button {
-    padding: 8px 16px;
-    background-color: #4CAF50;
+.difficulty-buttons {
+    margin-bottom: 20px;
+}
+
+button.easy, button.medium, button.hard {
+    all: unset; /* Remove all default styles */
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
     color: white;
-    border: none;
-    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.1em;
     cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#guess-button:hover {
-    background-color: #45a049;
+/* Apply colors specifically */
+button.easy {
+    background-color: #32CD32 !important; /* Lime Green for Easy */
+    border: 2px solid #228B22 !important; /* Forest Green border */
 }
 
-#feedback, #attempts {
+button.medium {
+    background-color: #FFA500 !important; /* Orange for Medium */
+    border: 2px solid #FF8C00 !important; /* Dark Orange border */
+}
+
+button.hard {
+    background-color: #DC143C !important; /* Crimson for Hard */
+    border: 2px solid #B22222 !important; /* Firebrick border */
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+/* Guess button */
+#guess-button {
+    background-color: #1E90FF !important; /* Dodger Blue */
+    border: 2px solid #1C86EE !important;
+    padding: 12px 25px;
+    font-size: 1.1em;
+}
+
+#feedback {
     margin-top: 10px;
     font-weight: bold;
+    color: #333;
+}
+
+#attempts {
+    font-size: 0.85em;
+    color: #333;
 }
